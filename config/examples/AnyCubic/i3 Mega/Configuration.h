@@ -1002,7 +1002,7 @@
  */
 #define DEFAULT_MAX_FEEDRATE \
   {                          \
-    300, 300, 5, 60          \
+    300, 300, 20, 60         \
   }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
@@ -1355,8 +1355,8 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE 10  // Z Clearance for Deploy/Stow
-#define Z_CLEARANCE_BETWEEN_PROBES 5 // Z Clearance between probe points
+#define Z_CLEARANCE_DEPLOY_PROBE 5   // Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_BETWEEN_PROBES 4 // Z Clearance between probe points
 #define Z_CLEARANCE_MULTI_PROBE 5    // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
@@ -1865,9 +1865,9 @@
 #endif
 
 // Homing speeds (mm/min)
-#define HOMING_FEEDRATE_MM_M       \
-  {                                \
-    (50 * 60), (50 * 60), (4 * 60) \
+#define HOMING_FEEDRATE_MM_M        \
+  {                                 \
+    (50 * 60), (50 * 60), (20 * 60) \
   }
 
 // Validate that endstops are triggered on homing moves
